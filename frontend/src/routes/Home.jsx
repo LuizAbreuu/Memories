@@ -2,6 +2,8 @@ import axios from "../axios-config";
 
 import { useState, useEffect } from "react";
 
+import { toast } from "react-toastify";
+
 import { Link } from "react-router-dom";
 
 import './Home.css';
@@ -16,7 +18,7 @@ const Home = () => {
 
             setMemories(res.data);
         };
-
+        
         getMemories();
 
     }, []);
